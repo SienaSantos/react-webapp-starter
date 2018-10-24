@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="shortcut icon" type="image/png" href="img/cs-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"></link>
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="/styles/style.css"></link>
+
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+
+
+  <script type="text/javascript">
+
+    // localStorage.setItem('role', <%= role %>)
+    // localStorage.setItem('id', <%= id %>)
+    // localStorage.setItem('notifToken', '<%= notifToken %>')
+    // localStorage.setItem('fullName', '<%= fullName %>')
+
+  </script>
+
+  <% if (settings.env === 'development') { %>
+    <script src="/vendor.bundle.js"></script>
+    <script src="/app.js"></script>
+  <% } else { %>
+    <!-- <script src="your-file-link-here/bundle.js"></script> -->
+    <!-- <script src="your-file-link-here/app.js"></script> -->
+  <% } %>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type = "text/javascript">
+    $('#preventType').bind('cut copy paste', function (e) {
+      e.preventDefault(); //disable cut,copy,paste
+    });
+  </script>
+</html>
