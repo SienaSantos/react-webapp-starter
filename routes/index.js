@@ -22,7 +22,7 @@ function roleObj(req){
 
 /* GET home page. */
 // add authChecker as middleware
-router.get('/', function(req, res, next) {
+router.get('/', authChecker, function(req, res, next) {
   // res.send('Hello')
   console.log('main')
   res.render('index', roleObj(req))
