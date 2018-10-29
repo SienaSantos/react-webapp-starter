@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Sidebar, Menu, Icon, Label, Sticky, Segment, Header } from 'semantic-ui-react'
 import routeConfig from "../../api/config";
 import axios from "axios";
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
-require('react-bootstrap-table/css/react-bootstrap-table.css')
-import BootstrapSortFunction from '../../utils/bootstrapSort'
+
 // import logo from "./logo.svg";
 // import "./App.css";
 import { urlFinder, withCreateNew, withIndex } from "../../utils/utils";

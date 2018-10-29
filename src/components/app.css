@@ -1,0 +1,781 @@
+/*@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700');
+
+body{ font-family: 'Nunito Sans', sans-serif !important; }*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.pushable {
+  min-height: 900px;
+}
+.sidebar {
+  width: 140px !important;
+}
+
+.ui.block.header {
+  margin-top: 0
+}
+
+.ui.huge.menu {
+  margin: 0
+}
+
+.ui.menu .item:before {
+  width: 0;
+}
+
+.ui.segment {
+  margin: 0;
+  /*background: #fafbfc;*/
+}
+
+.pusher {
+  /* margin-left: 140px */
+}
+
+.bg-light-gray{
+  background-color: #fafbfc;
+}
+
+.item.align-row {
+  flex-direction: row!important;
+  padding-left: 15px !important;
+}
+
+.full-width{
+  width: 100%
+}
+
+.application-container {
+}
+
+.tele-verify-text {
+  font-size: 1.2em !important;
+  padding-left: 5px;
+  font-weight: 700 !important;
+}
+.tele-verify-remarks {
+  font-size: 15px !important;
+  padding-left: 5px;
+  font-weight: 600;
+}
+
+.tele-verify-row {
+  border-top: 1px solid #ddd;
+}
+
+.tele-verify-header {
+  margin: 0 !important;
+  font-size: 16px !important;
+  font-weight: 600;
+}
+
+.noBorder{
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.loader-center{
+  margin-top: 15% !important;
+}
+
+.loanlist-item{
+  padding: 1em 2em !important;
+}
+
+.loanlist-item:hover{
+  background-color: #f6f6f6 !important;
+  text-decoration: none !important;
+}
+.loanlist-item:hover h2{
+  color : #333 !important;
+}
+
+.noPadding{
+  padding: 0px !important;
+}
+
+.noPaddingTop{
+  padding-top: 0px !important;
+}
+.noPaddingBottom{
+  padding-bottom: 0px !important;
+}
+.noMargin{
+  margin : 0px !important;
+}
+.noMarginBottom {
+  margin-bottom: 0px !important
+}
+.labelMarginBottom{
+  margin-bottom: 10px !important
+}
+
+.ui.divided.items>.item:first-child{
+  padding: 1em 2em !important;
+}
+
+.loan-checklist .ui.divided.items>.item:first-child{
+  padding: 1em 0em !important;
+}
+
+.filterBorder{
+  border-radius: 0px !important
+}
+.progressHeader{
+  margin-bottom: 10px !important;
+}
+.a-title{
+  font-weight: 600;
+  font-size: 13px;
+  color: #1B1C1D;
+}
+.a-fee{
+  padding-left: 15px !important;
+  color: gray !important;
+}
+
+.a-padding{
+  padding : .5em .7em;
+}
+
+.a-divider{
+  margin : 2rem 0 !important;
+}
+
+.bg-lightblue{
+  background-color: #e0eff5;
+}
+
+.bold{
+  font-weight: 700 !important;
+}
+
+.floatRight{
+  float: right !important;
+}
+.noMarginTop {
+  margin-top: 0px !important;
+}
+
+.alertModal{
+  width: 600px !important;
+  margin: -8% 0 0 -23% !important;
+  text-align: center !important;
+}
+
+.paymentModal{
+  width: 600px !important;
+  margin: -8% 0 0 -23% !important;
+  text-align: center !important;
+  top:23% !important;
+}
+.score{
+  color: #276F86;
+}
+
+.segmentHead{
+  margin-bottom: 0px !important;
+  border-radius: 4px 4px 0px 0px !important;
+}
+.segmentBody{
+  border-radius: 0px 0px 4px 4px !important;
+}
+
+.segmentBody .ui.ribbon.label {
+  left: calc(-0.7rem - 1.2em) !important;
+}
+
+.margin3{
+  margin-top: 3px !important;
+}
+
+.marginTop7{
+  margin-top: 7px !important;
+}
+
+.tele-check{
+  font-size: 1.5em !important;
+}
+.outright-label{
+  font-size: 11px !important;
+  width: 90px !important;
+  text-align: center !important;
+}
+.recal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.remark-body .ui.input input{
+  /*max-width: 85% !important;*/
+}
+
+.remark-body .ui.selection.dropdown{
+  min-width: 12em !important
+}
+
+.txtRemark{
+  padding-left: 10px !important;
+  margin-top: 3px !important;
+}
+.txtRemarkArea{
+  margin-top: 5px !important;
+}
+.txtWidth {
+  width : 96% !important;
+}
+.reco-body .a-scale{
+  padding : .883em 1.833em !important;
+}
+
+.noMarginLeftRight{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.approvalFooter{
+  background-color: #23292f;
+  margin-top: 10px !important;
+}
+.approvalTop{
+  background-color: #23292f;
+  margin-top: -14px !important;
+}
+
+.adjudicate-left .ui.ribbon.label{
+  left : calc(-.8rem - 1.2em) !important;
+}
+
+/*application documents*/
+.innerDropP2{
+  margin: 0px;
+  font-size: 11px;
+  color: darkgray;
+}
+
+.innerDroph4, .dropIcon{
+  margin-top: 40px !important;
+  color: darkgray;
+}
+
+.innerDroph5, .dropIcon{
+  margin-top: 25px !important;
+  color: darkgray;
+}
+
+.dropIcon{
+  color: darkgray;
+  font-size: 95px !important;
+}
+
+.innerDropP1{
+  margin: 10px 0;
+  color: lightgray;
+}
+
+.parent-content .list{
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px dashed whitesmoke;
+}
+
+.parent-content .content .head{
+  color: #65658e !important;
+  font-size: 16px;
+  margin-bottom: 5px !important;
+}
+
+.parent-content .content{
+  color: lightgray;
+  font-size: 12px;
+}
+/*.parent-content .row{
+  margin: 0 -14px 0 0;
+}*/
+
+.container2{
+  margin: 1% 5%;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px dashed;
+  border-bottom: 4px solid \9;
+}
+
+.margin5px{
+  padding: 5px 0 !important;
+}
+
+
+.ui.green.button.onFocusButton:focus, .ui.facebook.button.onFocusButton:focus {
+    filter: opacity(60%)!important;
+}
+
+.barProfile{
+  display: inline;
+}
+
+.barProfile .fullName {
+  margin-bottom: 0px !important;
+}
+
+.barProfile .roleName {
+  font-size: 11px;
+}
+.appMenu{
+  margin: 0px !important;
+}
+
+.accessDenied{
+  margin-top: 40px !important;
+}
+
+.alarmIcon{
+  border-left: 1px solid #f5f5f5 !important;
+  padding: 19px !important;
+}
+
+.alarmIcon .icon{
+  font-size: 1.7em !important;
+  color: #555 !important;
+  margin: 0px !important;
+}
+
+.floatingIcon{
+  top: 1.6em !important;
+  left: 69%!important;
+  font-size: 7px!important;
+  background-color: #F80106 !important;
+  border: 1px solid #fff !important;
+}
+
+.notifItem{
+  padding: 15px 20px !important;
+  background-color: #fafbfc !important;
+  border-bottom:1px solid gainsboro !important;
+}
+
+.notifListGrid{
+  padding: 15px 20px !important;
+  background-color: #fafbfc !important;
+  margin-bottom:-28px !important;
+  color:black !important;
+  border-bottom:1px solid gainsboro !important;
+}
+
+.notifItem:hover{
+  text-decoration: none !important;
+  background-color: #EDF2FA !important;
+}
+.notifListGrid:hover{
+  text-decoration: none !important;
+  background-color: #EDF2FA !important;
+  cursor: pointer !important;
+}
+
+.notifItem .icon{
+  padding-left: 10px !important;
+}
+
+.notifListContentdrpdwn{
+  margin:35px 0px 0px 31px !important;
+  font-size:13px !important;
+}
+
+.notifListDescriptiondrpdwn{
+  font-size: 13px !important;
+  margin-left: 31px !important;
+  margin-top:4px !important;
+  /* white-space:pre-wrap !important; */
+}
+
+.notifListContentIcondrpdwn{
+  margin:-48px 0px -49px -66px !important;
+}
+
+.notifListHeaderdrpdwn{
+  margin:8px 0px -20px -1px !important;
+}
+
+.notifClientNamedrpdwn{
+  font-size:11px !important;
+  margin-left:32px !important;
+  color:midnightblue !important;
+}
+
+.notifListContentdrpdwnDate{
+  float:right !important;
+  font-size:10px !important;
+  margin-top:-15px !important;
+  margin-right:-30px !important;
+  color:darkslategrey !important;
+}
+
+.notifListContentdrpdwnAgo{
+  font-size:10px !important;
+  float:right !important;
+  margin:-2px -27px 0px 0px !important;
+  color:darkslategrey !important;
+}
+.notifListContentdrpdwnAgoIcon{
+  float:right !important;
+}
+
+.notifListDescription{
+  margin-left:87px !important;
+  margin-top:6px !important;
+}
+
+.notifListContentIcon{
+  margin:-1px 0px -60px -15px !important;
+}
+
+.notifListHeader{
+  margin:11px 0px -7px 90px !important;
+}
+.notifListContent{
+    margin:8px 0 -5px 23px !important;
+}
+
+.notifClientName{
+  font-size: 12px !important;
+  margin-left: -5px !important;
+  color:midnightblue !important;
+  margin-bottom: 10px !important;
+}
+
+.notifListHeaderDate{
+  float:right !important;
+  margin-top: 1px !important;
+  margin-right: 1px !important;
+  font-size: 10px !important;
+  padding-bottom: 50px !important;
+}
+
+.notifListHeaderIcon{
+  float:right !important;
+}
+
+.notifListContentAgo{
+  font-size:10px !important;
+  margin-right: -100px !important;
+  margin-bottom: 24px !important;
+  margin-top: 13px !important;
+  float:right !important;
+}
+
+.notifSeeAll{
+  text-align:center !important;
+  padding:4px !important;
+  margin:-9px 0px 5px 0px !important;
+}
+
+.profileBar{
+  border-left: 1px solid #f5f5f5 !important;
+}
+
+.text-center{
+  text-align: center;
+}
+.appMenu .headr{
+  font-size: 18px !important;
+  padding: 0px 25px !important;
+}
+
+.loanPageTabs{
+  margin-top: 5px;
+}
+
+.loanPageTabs .active.item{
+  font-weight: 700 !important;
+  border: 1px solid #ddd !important;
+}
+.loanPageTabs .pageSegment{
+  background-color: #fff !important;
+  min-height: 500px !important;
+}
+
+.loanPageHead .txtHeader{
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.loanPageHead h2 {
+  color: #425B7C !important;
+}
+
+.loanPageHead .messageHead{
+  padding: 0px 30px !important;
+}
+
+.loanPageHead p {
+  font-size: 15px!important;
+  font-weight: 500;
+  margin: 2px 0px !important;
+  color: #304054 !important;
+}
+.loanPageTabs .menu {
+  box-shadow: none !important;
+}
+.c-title{
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  color: #3e76a9;
+  background-color: rgba(194, 226, 236, 0.88);
+  padding: 7px 10px;
+}
+
+.sectionHolder{
+  margin-bottom: 35px !important;
+}
+
+.segment-header-default{
+  background-color:#FAFBFC !important;
+
+}
+.text-blue{
+ color:#425B7C !important;
+}
+.remove-padding-bottom{
+  padding-bottom: 0px !important
+}
+.remove-padding-first:first-child {
+    padding-bottom: 0px !important;
+}
+
+.loanStatusItem{
+  padding:19px 20px !important;
+
+}
+.loanStatusItem:hover{
+  background-color: #FAFBFC;
+  }
+
+.panel{
+  overflow: auto;
+}
+.panel-card-icon{
+    padding-top: 90px;
+    padding-left: 50px !important;
+    opacity: 0.3;
+}
+.panel-card-title{
+  font-size:15px;
+  padding-top:0px;
+}
+.span-date{
+  padding-left: 10px;
+  display: inline-flex;
+}
+.text-top{
+  padding-top: 7px;
+  padding-right: 5px;
+}
+.dashboard-segment{
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 2px !important;
+    text-align: right !important;
+}
+.list-no-margin-align-right{
+  padding-right:100px;
+  text-align:right;
+  margin:0 !important;
+}
+.list-no-margin-align-left{
+  padding-right:60px;
+  margin:0 !important;
+}
+
+.loanDatePicker input{
+   display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sidebarItem{
+  display : -webkit-inline-box;
+}
+.sidebarTxt{
+  font-weight: 600;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.sidebarCircle{
+  font-size: 7px !important;
+  margin-top: 13px !important;
+}
+
+.inboxCircle{
+  font-size: 4px !important;
+  margin-top: 13px !important;
+}
+
+.menuItem{
+  text-align: left !important;
+  padding: 8px 10px !important;
+}
+
+.doc-listItem{
+  padding: 10px !important;
+  font-size: 15px !important;
+  border-bottom: 1px solid #ddd !important;
+  text-decoration: none !important;
+}
+
+.doc-listItem:hover{
+  background-color: #f6f6f6;
+}
+
+.doc-listItem .header{
+  font-size: 17px !important;
+  margin-bottom: 6px !important;
+  color: #4370c1 !important;
+}
+
+.selectedValue{
+  font-size: 17px!important;
+  color : #0c3542 !important;
+  padding-left: 3px !important;
+}
+
+.screenAppHead .header{
+  font-weight: 600 !important;
+}
+
+.trOrange { background-color: orange !important;}
+.trPink { background-color: pink !important;}
+.trTeal { background-color: #00B5AD !important;}
+.trBlue { background-color: #2185D0 !important;}
+.trViolet { background-color: violet !important;}
+.trRed { background-color: #DB2828 !important;}
+.trRed { background-color: #21BA45 !important;}
+/*
+.loanDocViewer .ui.fullscreen.modal {
+    margin: 1rem auto !important;
+}*/
+
+/*#myIframe{
+transform:scale(1.5);
+}*/
+.fineSize{
+  font-size: 11px !important;
+}
+.actualItem{
+  display: inline-grid !important;
+}
+
+.loanDoc i{
+  color : green !important;
+}
+
+.inboxv2 .dot{
+  width: 20px;
+}
+.inboxv2 .name{
+  font-weight: 700;
+}
+
+.inboxv2 .loanId{
+  /* width: 100px; */
+}
+.inboxv2 .alignMiddle{
+  padding-top: 7px;
+}
+.inboxv2 .date{
+  font-size: 12px;
+}
+
+.inboxv2 .read{
+  background-color:  #f9f9f9;
+  font-weight: 600 !important;
+  color: #666666;
+}
+.inboxv2 .unread{
+
+  background-color: white;
+  color: #444;
+  font-weight: 700 !important;
+}
+
+.inboxv2 .inbox-item:hover{
+  background-color: #e6e6e6;
+  cursor: pointer;
+  color: black;
+}
+
+.inbox-head th{
+  padding: 10px 0px !important;
+}
+
+.inbox-table {
+  font-size: .9em !important;
+}
+
+.ui.cards a.card.reportCard:hover, .ui.link.card.reportCard:hover, .ui.link.cards .card.reportCard:hover, a.ui.card.reportCard:hover{
+  background-color: #f7f7f7 !important;
+  text-decoration: none !important;
+}
+
+.report-date{
+  width : 300px !important;
+}
+
+.report-form{
+  width: 50% !important;
+  margin: auto !important;
+  padding: 10px !important;
+}
+
+.loan-creditreport{
+  color: #337ab7 !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+
+.loan-creditreport:hover{
+  cursor: pointer;
+  color: #24527b !important;
+}
+
+.ui.table[class*="single line"] {
+  white-space: normal !important;
+}

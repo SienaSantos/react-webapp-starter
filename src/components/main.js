@@ -7,6 +7,8 @@ import axios from "axios";
 import Dashboard from './dashboard'
 import Data from './data'
 
+import './app.css'
+
 const routes = [
   {
     path: "/dashboard",
@@ -39,7 +41,7 @@ class Main extends Component {
             <Link className="item" to="/data">Data</Link>
           </Menu>
           <div>
-            {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}            
+            {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
           </div>
         </div>
       </Router>
