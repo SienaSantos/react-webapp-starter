@@ -22,7 +22,6 @@ export function withCreateNew(Component) {
 }
 
 export function withIndex(Component) {
-  console.log('call')
   return class IndexWrapper extends React.Component {
     state = {
       data: []
@@ -46,12 +45,33 @@ export function withGetOne(Component) {
     state = {
       data: []
     };
-    handleClick() {
+
+    componentDidMount() {
+      console.log('with get one', this.props)
+      var { id, namespace } = this.props.match.params
       const topic = routeConfig.find(
         ({ namespace }) => namespace === this.props.match.params.namespace
       );
       const indexUrl = topic.routes.find(({ type }) => type === "get");
-      axios.get(indexUrl.source).then(res => console.log(res.data));
+      axios.get(`${indexUrl.source}/${id}`).then(res => this.setState({ data: res.data }));
+    }
+    render() {
+      return <Component {...this.props} data={this.state.data} />;
+    }
+  };
+}
+
+export function withUpdateOne(Component) {
+  return class IndexWrapper extends React.Component {
+
+    handleClick() {
+      console.log('with get one', this.props)
+      var { id, namespace } = this.props.match.params
+      const topic = routeConfig.find(
+        ({ namespace }) => namespace === this.props.match.params.namespace
+      );
+      const indexUrl = topic.routes.find(({ type }) => type === "put");
+      axios.get(`${indexUrl.source}/${id}`).then(res => this.setState({ data: res.data }));
     }
     render() {
       return <Component {...this.props} data={this.state.data} />;

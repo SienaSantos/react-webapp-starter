@@ -32,6 +32,12 @@ router.get('/data/loans', function(req, res, next) {
 router.get('/data/users', function(req, res, next) {
   res.render('index', roleObj(req))
 });
+router.get('/data/loans/:id', function(req, res, next) {
+  res.render('index', roleObj(req))
+});
+router.get('/data/users/:id', function(req, res, next) {
+  res.render('index', roleObj(req))
+});
 
 x.forEach(route => {
   route.routes.forEach(module => {
@@ -63,6 +69,15 @@ x.forEach(route => {
     if(module.type === 'post'){
       router.post(module.route, function(req,res,next){
         request.post(module.source)
+          .set('Content-Type', 'application/json')
+          .send(req.body)
+          .then(data => res.send(data.body))
+      })
+    }
+
+    if(module.type === 'patch'){
+      router.patch(module.route, function(req,res,next){
+        request.patch(module.source)
           .set('Content-Type', 'application/json')
           .send(req.body)
           .then(data => res.send(data.body))

@@ -73,7 +73,7 @@ class DataTable extends Component {
                     <Table.Body>
                       {
                         pageOfItems.map((obj, i) => {
-                          return <DataItem key={i} items={obj}/>
+                          return <DataItem key={i} items={obj} {...this.props}/>
                           })
                         }
                     </Table.Body>

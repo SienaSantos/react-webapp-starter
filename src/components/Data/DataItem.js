@@ -1,57 +1,32 @@
+
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Item, Label, Divider, Header, Table} from 'semantic-ui-react'
 import Utils from '../../../utils/format'
+import ids from '../../../api/id'
 
 var moment = require('moment');
 
-const styles={
-  "dot" : {
-    width : "20px"
-  },
-  "name":{
-    "fontWeight":"700"
-  },
-  "item":{
-
-  }
-}
-
 class DataItem extends PureComponent {
 
-  selectedRow(row){
-    console.log(row)
-    // var { setSelectedLoan, updateLoanStatus, agentId, roleId, isOpen }= this.props
-    //
-    // if (row.status == "Pending" && roleId == "2"){
-    //   var obj = {
-    //     email : agentId,
-    //     loanId : row.loanId,
-    //     status: 'For Verification',
-    //     date : moment(new Date).format('YYYY-MM-DD HH:mm:ss')
-    //   }
-    //   updateLoanStatus(obj, "Initial")
-    // }
-    // setSelectedLoan(row)
-    // localStorage.setItem('bId',row.borrowerId)
-    // localStorage.setItem('lId',row.loanId)
-    // browserHistory.push('/applications/'+row.loanId)
-    // console.log("row",row)
+  onRowSelect(row){
+    var { history, match } = this.props
+    var id = ids[match.params.namespace]
+    // console.log(id)
+    history.push(`${match.url}/${row[id]}`)
   }
 
-
-
   render () {
-    var { items } = this.props
+    var { items, match } = this.props
     return (
-        <Table.Row className="inbox-item" textAlign={'center'} onClick={this.selectedRow.bind(this, items)} >
-          {
-            Object.keys(items).map((key)=>{
-              return <Table.Cell textAlign="center"><div className="alignMiddle">{items[key]}</div></Table.Cell>
-            })
-          }
-        </Table.Row>
-
+      <Table.Row className="inbox-item" textAlign={'center'} onClick={this.onRowSelect.bind(this, items)} >
+        {
+          Object.keys(items).map((key)=>{
+            return <Table.Cell textAlign="center"><div className="alignMiddle">{items[key]}</div></Table.Cell>
+          })
+        }
+      </Table.Row>
     )
   }
 }

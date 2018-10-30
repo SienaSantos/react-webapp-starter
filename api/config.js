@@ -19,6 +19,12 @@ module.exports = [
         desc: "create",
         route: "/users",
         source: "http://localhost:4000/users"
+      },
+      {
+        type: "put",
+        desc: "edit",
+        route: "/users/:id",
+        source: "http://localhost:4000/users"
       }
     ]
   },
@@ -41,6 +47,12 @@ module.exports = [
         type: "post",
         desc: "create",
         route: "/loans",
+        source: "http://localhost:4000/loans"
+      },
+      {
+        type: "put",
+        desc: "edit",
+        route: "/loans/:id",
         source: "http://localhost:4000/loans"
       }
     ]

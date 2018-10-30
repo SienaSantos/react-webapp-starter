@@ -6,15 +6,15 @@ import axios from "axios";
 
 // import logo from "./logo.svg";
 // import "./App.css";
-import { urlFinder, withCreateNew, withIndex } from "../../utils/utils";
+import { urlFinder, withCreateNew, withIndex, withGetOne } from "../../utils/utils";
 
 import DataTable from './Data/DataTable'
+import SingleDataPage from './Data/SingleDataPage'
+
 
 
 
 function DataTable1({ match, data }) {
-  console.log('props ',match)
-  console.log('data ',data)
   return data[0] ? (
     <div className="container">
       <table>
@@ -42,7 +42,6 @@ function DataTable1({ match, data }) {
   ) : null;
 }
 
-
 function Page({ match, handleClick }) {
   console.log(match)
   return (
@@ -50,7 +49,8 @@ function Page({ match, handleClick }) {
       <h1>{match.params.namespace}</h1>
       <button onClick={handleClick}>Add New</button>
       <hr/><br/>
-      <Route path={`${match.path}`} component={withIndex(DataTable)} />
+      <Route exact path={`${match.path}`} component={withIndex(DataTable)} />
+      <Route path={`${match.path}/:id`} component={withGetOne(SingleDataPage)} />
       <hr/>
     </div>
   );
