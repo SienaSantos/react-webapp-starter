@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var x = require('../api/config')
+var request = require('superagent')
 
 // var mongoose = require('mongoose');
 // var userSchema = require('../models/user');
@@ -51,6 +52,9 @@ x.forEach(route => {
               module.cb('hello woeerld', req, res)
 
             res.send(resp.body);
+         })
+         .catch(err=>{
+           console.log(err)
          });
       })
     }
@@ -62,6 +66,9 @@ x.forEach(route => {
          .set('Accept', 'application/json')
          .then(resp => {
             res.send(resp.body);
+         })
+         .catch(err =>{
+           console.log(err)
          });
       })
     }
@@ -77,7 +84,7 @@ x.forEach(route => {
 
     if(module.type === 'patch'){
       router.patch(module.route, function(req,res,next){
-        request.patch(module.source)
+        request.patch(`${module.source}/${req.params.id}`)
           .set('Content-Type', 'application/json')
           .send(req.body)
           .then(data => res.send(data.body))

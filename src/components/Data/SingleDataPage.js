@@ -34,10 +34,13 @@ class SingleDataPage extends PureComponent {
     var { data } = this.state
     console.log('submit ', data)
 
+    this.props.handleClick(data)
+
   }
 
   render () {
     var { data } = this.state
+    console.log('single page props ', this.props)
 
     var fields = Object.keys(data).map((key)=>{
       return (
